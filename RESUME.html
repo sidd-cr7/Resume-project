@@ -88,13 +88,26 @@
     .w3schools-button:hover {
       background-color: #388E3C;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+    }
   </style>
 </head>
 <body>
   <div class="resume">
     <!-- Header Section -->
     <div class="header">
-      <img src="pfp.jpg" alt="Your Photo" class="photo">
+      <img src="pfp.jpg" alt="Professional photo of R Leelasiddharth" class="photo">
       <h1>R Leelasiddharth</h1>
       <p>B.Tech, School of Computer Science and Engineering</p>
       <p>RV University, Section E</p>
@@ -110,25 +123,41 @@
     <!-- Academic Background Section -->
     <div class="section">
       <h2>Academic Background</h2>
-      <p>BTech (Hons) in Computer Science and Engineering - RV University 2024-2028</p>
-    </div>
-<!-- Educational Qualifications -->
-    <div class="section">
-      <h2>Educational Qualifications</h2>
-      <div class="skills">
-        <div class="skill">10th</div>
-        <div class="skill">12th</div>
-        <div class="skill">Ongoing Btech UG Degree</div>
-      </div>
+      <table>
+        <tr>
+          <th>Qualification</th>
+          <th>Institution</th>
+          <th>Year</th>
+          <th>Marks</th>
+        </tr>
+        <tr>
+          <td>10th Grade</td>
+          <td>Sindhi High School, KK rd</td>
+          <td>2022</td>
+          <td>9.0CGPA</td>
+        </tr>
+        <tr>
+          <td>12th Grade</td>
+          <td>DPS Bangalore North</td>
+          <td>2024</td>
+          <td>9 CGPA</td>
+        </tr>
+        <tr>
+          <td>BTech (Hons) in Computer Science and Engineering</td>
+          <td>RV University</td>
+          <td>2024-2028</td>
+          <td>Ongoing</td>
+        </tr>
+      </table>
     </div>
 
     <!-- Skills Section -->
     <div class="section">
       <h2>Skills</h2>
       <div class="skills">
-        <div class="skill">Programming Languages: C, Python,</div>
+        <div class="skill">Programming Languages: C, Python</div>
         <div class="skill">Web Development: HTML, CSS, JavaScript</div>
-        <div class="skill">Data Structures & Algorithms, MYsql</div>
+        <div class="skill">Data Structures & Algorithms, MySQL</div>
         <div class="skill">Machine Learning Basics</div>
         <div class="skill">Team Collaboration</div>
       </div>
@@ -149,7 +178,23 @@
     <div class="button-container">
       <a href="https://github.com/sidd-cr7/Resume-project.git" target="_blank" class="github-button">View GitHub Profile</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScHlZga-dp-RhViI5q8IsqMHEwCi8EWveWul-xYrzmIvewW5A/viewform?usp=sf_link" class="google-form-button">Fill out Google Form</a>
+    </div>
 
+    <!-- Contact Form Section -->
+    <div class="section">
+      <h2>Contact Form</h2>
+      <form action="/submit" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </div>
 </body>
